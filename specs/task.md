@@ -37,14 +37,14 @@ Seguir las cuatro fases acordadas, los requisitos de [CONTEXT.md](CONTEXT.md) y 
     - [x] Incorporar subtotal, impuestos y total general.
     - [x] Comprobar la coherencia aritmética de todos los importes estáticos.
     - [x] Añadir el enlace “Comprar” hacia el checkout de demostración.
-  - [ ] **Checkout (`checkout.html`)**
-    - [ ] Crear el paso 1: datos personales.
-    - [ ] Crear el paso 2: dirección de entrega.
-    - [ ] Crear el paso 3: representación del pago con tarjeta.
-    - [ ] Organizar los pasos como secciones accesibles con enlaces internos para avanzar y retroceder.
-    - [ ] Identificar cada paso mediante encabezados numerados y etiquetas visibles.
-    - [ ] Utilizar datos ficticios y representar la tarjeta con información de ejemplo no editable.
-    - [ ] Indicar que no se realiza una compra real; evitar envío, almacenamiento o solicitud de datos bancarios reales.
+  - [x] **Checkout (`checkout.html`)**
+    - [x] Crear el paso 1: datos personales.
+    - [x] Crear el paso 2: dirección de entrega.
+    - [x] Crear el paso 3: representación del pago con tarjeta.
+    - [x] Organizar los pasos como secciones accesibles con enlaces internos para avanzar y retroceder.
+    - [x] Identificar cada paso mediante encabezados numerados y etiquetas visibles.
+    - [x] Utilizar datos ficticios y representar la tarjeta con información de ejemplo no editable.
+    - [x] Indicar que no se realiza una compra real; evitar envío, almacenamiento o solicitud de datos bancarios reales.
 
 - [ ] **Control de Calidad y Refinamiento**
   - [ ] Verificar el uso exclusivo de HTML y Tailwind CSS, sin CSS personalizado, frameworks ni JavaScript de aplicación.
