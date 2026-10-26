@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Finaliza tu pedido en Drôle de Monsieur.">
+  <title>Checkout | Drôle de Monsieur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="docs/reference/tailwind.css">
+</head>
+<body class="flex min-h-screen flex-col bg-[#F7F5F0] font-['Archivo',sans-serif] text-black">
+  <a href="#contenido" class="sr-only z-50 bg-black p-3 text-white focus:not-sr-only focus:absolute">
+    Saltar al contenido
+  </a>
+
+  <header class="border-b border-[#DEDAD3]">
+    <nav aria-label="Navegación principal" class="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-6 px-4 py-6 md:px-8">
+      <p class="max-w-full font-['Libre_Baskerville',serif] text-xl sm:text-2xl">Drôle de Monsieur</p>
+      <div role="search" aria-label="Búsqueda de productos" class="order-last w-full md:order-none md:ml-auto md:w-72">
+        <label for="busqueda" class="mb-2 block text-sm">Buscar productos</label>
+        <input id="busqueda" type="search" disabled placeholder="Buscar"
+          class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 text-base disabled:cursor-not-allowed disabled:text-neutral-600 disabled:opacity-75">
+      </div>
+      <details class="w-full sm:w-auto md:max-w-56">
+        <summary class="min-h-11 cursor-pointer py-3 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6F263D]">Cuenta</summary>
+        <p class="max-w-56 pb-3 text-sm text-neutral-700">Acceso a cuenta no disponible.</p>
+      </details>
+    </nav>
+  </header>
+
+  <main id="contenido" tabindex="-1" class="mx-auto min-h-[40vh] w-full max-w-[1440px] flex-1 px-4 py-8 md:px-8 md:py-12">
+    <h1 class="mb-4 font-['Libre_Baskerville',serif] text-xl sm:text-2xl">Checkout</h1>
+    <p class="mb-6 text-sm text-neutral-700">
+      Puedes completar los datos con información ficticia. Esta página no envía ni guarda datos,
+      y no procesa pagos. No introduzcas información personal ni bancaria real.
+    </p>
+
+    <nav aria-label="Pasos del checkout" class="mb-8 border-y border-[#DEDAD3] py-4">
+      <ol class="flex flex-wrap gap-4 text-sm">
+        <li><a href="#datos" class="underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6F263D]">1. Datos personales</a></li>
+        <li><a href="#entrega" class="underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6F263D]">2. Entrega</a></li>
+        <li><a href="#pago" class="underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6F263D]">3. Pago</a></li>
+      </ol>
+    </nav>
+
+    <div class="grid gap-10 lg:grid-cols-3">
+      <div class="grid gap-8 lg:col-span-2">
+        <section id="datos" aria-labelledby="titulo-datos">
+          <h2 id="titulo-datos" class="mb-4 font-['Libre_Baskerville',serif] text-lg">Paso 1 · Datos personales</h2>
+          <fieldset class="grid gap-4 sm:grid-cols-2">
+            <legend class="sr-only">Datos personales</legend>
+            <div>
+              <label for="nombre" class="mb-2 block text-sm">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Nombre"
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div>
+              <label for="apellido" class="mb-2 block text-sm">Apellido</label>
+              <input id="apellido" name="apellido" type="text" autocomplete="family-name" placeholder="Apellido"
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div>
+              <label for="correo" class="mb-2 block text-sm">Correo electrónico</label>
+              <input id="correo" name="correo" type="email" autocomplete="email" placeholder="ejemplo@email.com"
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div>
+              <label for="telefono" class="mb-2 block text-sm">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="+33 0 00 00 00 00"
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+          </fieldset>
+        </section>
+
+        <section id="entrega" aria-labelledby="titulo-entrega">
+          <h2 id="titulo-entrega" class="mb-4 font-['Libre_Baskerville',serif] text-lg">Paso 2 · Dirección de entrega</h2>
+          <fieldset class="grid gap-4 sm:grid-cols-2">
+            <legend class="sr-only">Dirección de entrega</legend>
+            <div class="sm:col-span-2">
+              <label for="calle" class="mb-2 block text-sm">Calle</label>
+              <input id="calle" name="calle" type="text" autocomplete="street-address" placeholder="Calle y número"
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div>
+              <label for="ciudad" class="mb-2 block text-sm">Ciudad</label>
+              <input id="ciudad" name="ciudad" type="text" autocomplete="address-level2" placeholder="Ciudad"
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div>
+              <label for="codigo-postal" class="mb-2 block text-sm">Código postal</label>
+              <input id="codigo-postal" name="codigo-postal" type="text" autocomplete="postal-code" placeholder="Código postal"
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div>
+              <label for="pais" class="mb-2 block text-sm">País</label>
+              <input id="pais" name="pais" type="text" autocomplete="country-name" placeholder="País"
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+          </fieldset>
+        </section>
+
+        <section id="pago" aria-labelledby="titulo-pago">
+          <h2 id="titulo-pago" class="mb-4 font-['Libre_Baskerville',serif] text-lg">Paso 3 · Pago con tarjeta</h2>
+          <p class="mb-4 text-sm text-[#6F263D]">
+            Campos bloqueados. No se procesa ningún cobro; no introduzcas datos bancarios reales.
+          </p>
+          <fieldset class="grid gap-4 sm:grid-cols-2">
+            <legend class="sr-only">Datos de tarjeta</legend>
+            <div class="sm:col-span-2">
+              <label for="titular" class="mb-2 block text-sm">Nombre del titular</label>
+              <input id="titular" name="titular" type="text" placeholder="Nombre del titular" readonly
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="tarjeta" class="mb-2 block text-sm">Número de tarjeta</label>
+              <input id="tarjeta" name="tarjeta" type="text" placeholder="0000 0000 0000 0000" readonly
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div>
+              <label for="expiracion" class="mb-2 block text-sm">Fecha de expiración</label>
+              <input id="expiracion" name="expiracion" type="text" placeholder="MM/AA" readonly
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+            <div>
+              <label for="cvv" class="mb-2 block text-sm">CVV</label>
+              <input id="cvv" name="cvv" type="text" placeholder="CVV" readonly
+                class="min-h-11 w-full rounded-none border border-[#DEDAD3] bg-transparent px-3 py-2">
+            </div>
+          </fieldset>
+        </section>
+
+      </div>
+
+      <aside aria-labelledby="resumen" class="h-fit border border-[#DEDAD3] p-4">
+        <h2 id="resumen" class="mb-4 font-['Libre_Baskerville',serif] text-lg">Resumen del pedido</h2>
+        <ul class="space-y-3 border-b border-[#DEDAD3] pb-4 text-sm">
+          <li class="flex justify-between gap-4"><span>Le T-shirt Slogan × 1</span><span>€95,00</span></li>
+          <li class="flex justify-between gap-4"><span>Le Sweatshirt D'Hôtel × 2</span><span>€440,00</span></li>
+          <li class="flex justify-between gap-4"><span>Le Pantalon D'Hôtel × 1</span><span>€260,00</span></li>
+        </ul>
+        <dl class="mt-4 space-y-3 text-sm">
+          <div class="flex justify-between gap-4"><dt>Subtotal</dt><dd>€795,00</dd></div>
+          <div class="flex justify-between gap-4"><dt>Impuestos estimados (20%)</dt><dd>€159,00</dd></div>
+          <div class="flex justify-between gap-4 border-t border-[#DEDAD3] pt-3 text-base font-semibold"><dt>Total</dt><dd>€954,00</dd></div>
+        </dl>
+        <p class="mt-4 text-sm text-neutral-700">Importes orientativos; no representan cargos reales.</p>
+        <button type="button" popovertarget="pago-confirmado" aria-controls="pago-confirmado" class="mt-6 min-h-11 w-full bg-black px-4 py-3 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#6F263D]">
+          Pagar y Finalizar Pedido
+        </button>
+        <div id="pago-confirmado" popover role="status" class="border border-[#DEDAD3] bg-[#F7F5F0] p-6 text-black">
+          <h2 class="font-['Libre_Baskerville',serif] text-lg">Pago ficticio completado</h2>
+          <p class="mt-2 text-sm">No se procesó ningún cobro ni se creó un pedido real.</p>
+          <button type="button" popovertarget="pago-confirmado" popovertargetaction="hide" class="mt-4 min-h-11 border border-black px-4 py-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6F263D]">
+            Cerrar
+          </button>
+        </div>
+        <a href="cart.html" class="mt-4 block text-center text-sm underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#6F263D]">
+          Volver al carrito
+        </a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="border-t border-[#DEDAD3] bg-[#EFE5D2]">
+    <div class="mx-auto grid max-w-[1440px] gap-10 px-4 py-10 sm:grid-cols-2 md:px-8 lg:grid-cols-3">
+      <section aria-labelledby="categorias">
+        <h2 id="categorias" class="mb-4 font-['Libre_Baskerville',serif] text-lg">Categorías</h2>
+        <ul class="space-y-3 text-sm">
+          <li>Calzado</li>
+          <li>Camisas</li>
+          <li>Pantalones</li>
+          <li>Accesorios</li>
+        </ul>
+      </section>
+      <section aria-labelledby="legal">
+        <h2 id="legal" class="mb-4 font-['Libre_Baskerville',serif] text-lg">Legal</h2>
+        <ul class="space-y-3 text-sm">
+          <li>Términos y condiciones</li>
+          <li>Política de privacidad</li>
+          <li>Sobre la marca</li>
+        </ul>
+      </section>
+      <section aria-labelledby="contacto">
+        <h2 id="contacto" class="mb-4 font-['Libre_Baskerville',serif] text-lg">Contacto</h2>
+        <p class="text-sm">Drôle de Monsieur · Francia</p>
+        <p class="mt-6 font-['Libre_Baskerville',serif] text-sm uppercase leading-relaxed text-[#6F263D]">Not from Paris Madame</p>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
