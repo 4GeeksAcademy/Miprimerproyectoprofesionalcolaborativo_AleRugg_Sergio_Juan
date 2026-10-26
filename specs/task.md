@@ -32,11 +32,11 @@ Seguir las cuatro fases acordadas, los requisitos de [CONTEXT.md](CONTEXT.md) y 
 
 - [ ] **Desarrollo del Flujo de Compra**
   - [ ] **Carrito (`cart.html`)**
-    - [ ] Maquetar una página completa, no un panel lateral.
-    - [ ] Mostrar tres productos de ejemplo con miniatura, nombre, precio unitario, cantidad y total por producto.
-    - [ ] Incorporar subtotal, impuestos y total general.
-    - [ ] Comprobar la coherencia aritmética de todos los importes estáticos.
-    - [ ] Añadir el enlace “Comprar” hacia el checkout de demostración.
+    - [x] Maquetar una página completa, no un panel lateral.
+    - [x] Mostrar tres productos de ejemplo con miniatura, nombre, precio unitario, cantidad y total por producto.
+    - [x] Incorporar subtotal, impuestos y total general.
+    - [x] Comprobar la coherencia aritmética de todos los importes estáticos.
+    - [x] Añadir el enlace “Comprar” hacia el checkout de demostración.
   - [ ] **Checkout (`checkout.html`)**
     - [ ] Crear el paso 1: datos personales.
     - [ ] Crear el paso 2: dirección de entrega.
